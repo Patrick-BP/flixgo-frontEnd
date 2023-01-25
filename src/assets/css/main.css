@@ -1,43 +1,4 @@
-/*----------------------------------------
-[Master Stylesheet]
 
-Project:	FlixGo
-Version:	1.0
-Primary use:	FlixGo Template
-----------------------------------------*/
-/*----------------------------------------
-[Table of contents]
-
-1. Header
-2. Home
-3. Content
-4. Section
-5. Breadcrumb
-6. Card
-7. Details
-8. FAQ
-9. How
-10. Partners
-11. Price
-12. Feature
-13. Catalog
-14. Filter
-15. Paginator
-16. Comments
-17. Reviews
-18. Form
-19.	Gallery
-20. Accordion
-21. Footer
-22. Sign
-23. Page 404
-24. Plyr customization
-25. PhotoSwipe customization
-26. mCustomScrollbar customization
-----------------------------------------*/
-/*==============================
-	Common styles
-==============================*/
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2076,9 +2037,7 @@ ul {
     margin: 25px 0 20px;
   }
 }
-/*==============================
-	Catalog
-==============================*/
+
 .catalog {
   padding: 0 0 20px;
 }
@@ -2087,9 +2046,7 @@ ul {
     padding: 0 0 45px;
   }
 }
-/*==============================
-	Filter
-==============================*/
+
 .filter {
   background-color: #28282d;
   -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.3);

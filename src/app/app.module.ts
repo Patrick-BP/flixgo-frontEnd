@@ -20,10 +20,7 @@ import { AttachTokenInterceptor } from './attach-token.interceptor';
 import { GlobalstateService } from './services/globalstate.service';
 import jwt_decode from 'jwt-decode';
 import { RoleGuard } from './guards/role.guard';
-import {VgCoreModule} from '@videogular/ngx-videogular/core';
-import {VgControlsModule} from '@videogular/ngx-videogular/controls';
-import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
-import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
+
 import {
   NgxUiLoaderModule,
   NgxUiLoaderConfig,
@@ -41,7 +38,6 @@ import { TruncatePipe } from './shared/truncate.pipe';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgPipesModule } from 'ngx-pipes';
 import { FilterPipe } from './shared/filter.pipe';
-import {AutoCompleteModule} from 'primeng/autocomplete';
 import { SearchPipe } from './shared/search.pipe';
 
 
@@ -147,12 +143,9 @@ const MY_ROUTES: Routes = [
     FormsModule,
     ReactiveFormsModule,
     materialComponents,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
+   
     NgPipesModule,
-    AutoCompleteModule
+ 
   ],
   exports: [materialComponents],
 })

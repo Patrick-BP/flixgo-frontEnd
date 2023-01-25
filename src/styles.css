@@ -191,3 +191,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-select-value {
   color:  rgba(252, 247, 247, 0.87) !important;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

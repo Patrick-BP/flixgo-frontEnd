@@ -21,7 +21,7 @@
             <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
               <div class="card__cover">
                 <img
-                  src="http://localhost:3001/public/posters/{{
+                  src="https://flixgo.herokuapp.com/public/posters/{{
                     movieDetails.thumbnail || 'poster.png'
                   }}"
                   alt=""
@@ -84,63 +84,14 @@
       <!-- end content -->
 
       <!-- player -->
-      <div class="col-12 col-xl-6" style="height: fit-content">
-        <vg-player>
-          <vg-overlay-play></vg-overlay-play>
-          <vg-buffering></vg-buffering>
-          <vg-scrub-bar>
-            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-          </vg-scrub-bar>
-          <vg-controls>
-            <vg-play-pause></vg-play-pause>
-            <vg-playback-button></vg-playback-button>
-            <vg-time-display
-              vgProperty="current"
-              vgFormat="mm:ss"
-            ></vg-time-display>
-            <vg-scrub-bar style="pointer-events: none"></vg-scrub-bar>
-            <vg-time-display
-              vgProperty="left"
-              vgFormat="mm:ss"
-            ></vg-time-display>
-            <vg-time-display
-              vgProperty="total"
-              vgFormat="mm:ss"
-            ></vg-time-display>
-            <vg-track-selector></vg-track-selector>
-            <vg-mute></vg-mute>
-            <vg-volume></vg-volume>
-            <vg-fullscreen></vg-fullscreen>
-          </vg-controls>
-          <video
-            [vgMedia]="$any(media)"
-            #media
-            id="singleVideo"
-            preload="auto"
-            crossorigin
-          >
-            <source
-              src="http://localhost:3001/public/movies/{{
-                movieDetails.videourl
-              }}"
-              type="video/mp4"
-            />
-            <source
-              src="http://localhost:3001/public/movies/{{
-                movieDetails.videourl
-              }}"
-              type="video/ogg"
-            />
-            <source
-              src="http://localhost:3001/public/movies/{{
-                movieDetails.videourl
-              }}"
-              type="video/webm"
-            />
-          </video>
-        </vg-player>
-
+      <div class="col-12 col-xl-6" style="height: fit-content"> -->
+        <video width="100%" controls>
+       
+          <source
+            src="https://flixgo.herokuapp.com/public/movies/{{movieDetails.videourl}}" type="video/mp4"
+          />
+        </video>
+       
         <ul class="details__share-list">
           <li class="facebook btn">
             <button *ngIf="!isfav" (click)="addToFav()">
@@ -178,7 +129,7 @@
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
       <!-- end player -->
 
       <div class="col-12">
@@ -327,7 +278,7 @@
                       <div class="comments__autor">
                         <img
                           class="comments__avatar"
-                          src="http://localhost:3001/public/profile/{{
+                          src="https://flixgo.herokuapp.com/public/profile/{{
                             comment.userId.imgUrl || 'profilepic.png'
                           }}"
                           alt=""
@@ -385,7 +336,7 @@
                           <div class="comments__autor">
                             <img
                               class="comments__avatar"
-                              src="http://localhost:3001/public/profile/{{
+                              src="https://flixgo.herokuapp.com/public/profile/{{
                                 reply.userId.imgUrl || 'profilepic.png'
                               }}"
                               alt=""
@@ -459,7 +410,7 @@
             <div class="card">
               <div class="card__cover">
                 <img
-                  src="http://localhost:3001/public/posters/{{
+                  src="https://flixgo.herokuapp.com/public/posters/{{
                     movie.thumbnail || 'poster.png'
                   }}"
                   alt=""
