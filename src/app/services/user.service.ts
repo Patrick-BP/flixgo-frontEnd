@@ -13,7 +13,7 @@ export class UserService {
       error: boolean;
       message: string;
       data: Object;
-    }>(environment.apiURL + 'signup', data);
+    }>(environment.apiURL + 'usr/signup', data);
   }
 
   signIn(data: Icredentials) {
