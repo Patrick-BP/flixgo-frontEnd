@@ -1,4 +1,4 @@
-@import "../../../assets/css/jquery.mCustomScrollbar.min.css";
+
 .bg-dark {
   background-color: #28282e;
   padding: 10px;
@@ -99,22 +99,18 @@ input:checked ~ .accordionn-content {
   padding: 16px;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #111111;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(214, 21, 95);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }

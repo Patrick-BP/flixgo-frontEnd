@@ -1,21 +1,16 @@
-<!-- details content -->
 <div class="container bg-dark">
   <div class="close-container">
     <mat-icon class="close-icon" mat-dialog-close>close</mat-icon>
   </div>
 
   <div class="row">
-    <!-- title -->
     <div class="col-12">
       <h1 class="details__title">{{ tvshowDetails.title }}</h1>
     </div>
-    <!-- end title -->
 
-    <!-- content -->
     <div class="col-12 col-xl-5">
       <div class="card card--details">
         <div class="row">
-          <!-- card cover -->
           <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
             <div class="card__cover">
               <img
@@ -37,9 +32,7 @@
               </form>
             </div>
           </div>
-          <!-- end card cover -->
 
-          <!-- card content -->
           <div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-7">
             <div class="card__content">
               <div class="card__wrap">
@@ -72,13 +65,10 @@
               </div>
             </div>
           </div>
-          <!-- end card content -->
         </div>
       </div>
     </div>
-    <!-- end content -->
 
-    <!-- player -->
     <div class="col-10 col-xl-7">
       <div class="accordionn-wrapper">
         <div class="accordionn" *ngFor="let season of episodes; let i = index">
@@ -131,65 +121,8 @@
         </div>
       </div>
 
-      <!-- <div class="accordion" id="accordion" style="position:relative; overflow:visible; overflow-y: scroll;">
-						
-
-
-                        <div class="accordion__card" *ngFor="let season of episodes  ; let i=index">
-							<div class="card-header" id="headingOne">
-								<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-									<span>Season: {{i+1}}</span>
-									
-								</button>
-							</div>
-							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-								<div class="card-body">
-									<table class="accordion__list">
-										<thead>
-											<tr>
-												<th>#</th>
-												<th>Title</th>
-                                                <th>Status</th>
-                                                <th>Upload</th>
-                                                <th>Delete</th>
-												
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr *ngFor="let episode of season| orderBy:'episode'; let i=index trackBy: indexTracker">
-												<th>{{i+1}}</th>
-												<td>{{episode.title}}</td>
-                                                <td>
-                                                    <span *ngIf="!(episode.videourl)" style="color:brown">No video File</span>
-                                                    <span *ngIf="episode.videourl">uploaded</span>
-                                                </td>
-                                                <td>
-                                                    
-                                                    
-                                                        
-                                                        <input  name="{{episode._id}}"  type="file" (change)="uploadVideo($event, episode._id)"/>
-                                                    
-                                                   
-                                                    </td>
-                                                <td><mat-icon (click)="deleteepis(episode._id)">clear</mat-icon></td>
-												
-											</tr>
-											
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-
-					
-
-
-
-					</div> -->
+      
     </div>
   </div>
-  <!-- end player -->
 </div>
 
-<!-- end details content -->

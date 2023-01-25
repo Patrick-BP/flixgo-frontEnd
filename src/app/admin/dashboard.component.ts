@@ -58,7 +58,7 @@ export class DashboardComponent implements OnDestroy {
     });
   }
 
-  //tvshows
+  
   tvshowtable() {
     this.tvshowService.getAllTvshows().subscribe((res) => {
       this.globalState.tvShowList.next(res.data as ITvshows[]);

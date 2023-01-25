@@ -44,7 +44,6 @@ export class TvshowdashboardComponent implements OnDestroy {
     this.tvListSub.unsubscribe();
   }
 
-  //tvshows
   tvshowtable() {
     this.tvshowServiceSub = this.tvshowService
       .getAllTvshows()
@@ -56,7 +55,6 @@ export class TvshowdashboardComponent implements OnDestroy {
 
   addTvshow() {
     const dialogConfig = new MatDialogConfig();
-    // dialogConfig.width = "550px";
     this.matDialog.open(AddtvshowComponent, dialogConfig);
   }
   editTvshow(id: string) {

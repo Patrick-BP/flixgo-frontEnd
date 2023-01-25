@@ -243,7 +243,7 @@ export class MovieDetailsComponent implements OnInit {
   }
   indexTracker() {}
 
-  //playlist
+  
   getPlayList() {
     this.movieService.getPlayList(this.userId).subscribe((res) => {});
   }
@@ -280,7 +280,7 @@ export class MovieDetailsComponent implements OnInit {
       this.isfav = res;
     });
   }
-  // Rating
+  
   rateShown: boolean = false;
   stars: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].reverse();
   selectedValue!: any;
