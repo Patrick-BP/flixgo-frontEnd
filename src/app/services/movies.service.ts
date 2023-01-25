@@ -28,7 +28,7 @@ export class MoviesService {
     return this.httpclient.get<{
       error: boolean;
       message: string;
-      data: Object;
+      data: any;
     }>(environment.apiURL + `movie/${movieId}`);
   };
   userGetMovieById(movieId: string) {

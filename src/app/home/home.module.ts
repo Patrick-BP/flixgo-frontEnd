@@ -31,6 +31,9 @@ import { PlayListComponent } from './play-list.component';
 import { CatalogtvshowsComponent } from './catalogtvshows.component';
 import { AboutComponent } from './about.component';
 
+
+
+
 const materialComponents = [
   MatButtonModule,
   MatSnackBarModule,
@@ -68,6 +71,8 @@ const MY_Routes: Routes = [
     PlayListComponent,
     CatalogtvshowsComponent,
     AboutComponent,
+    
+
   ],
   imports: [
     CommonModule,

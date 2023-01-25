@@ -5,7 +5,11 @@
   "projects": {
     "flixgo": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "flat": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@videogular/ngx-videogular/fonts/videogular.css",
               "src/custom-theme.scss",
               "src/styles.css"
             ],

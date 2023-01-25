@@ -143,8 +143,8 @@ const MY_ROUTES: Routes = [
     FormsModule,
     ReactiveFormsModule,
     materialComponents,
-   
     NgPipesModule,
+ 
  
   ],
   exports: [materialComponents],

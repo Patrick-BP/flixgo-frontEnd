@@ -6,6 +6,7 @@ import {
   OnDestroy,
   OnInit,
   Output,
+  ViewChild,
 } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -22,6 +23,7 @@ import { ImovieComment } from '../shared/comments.interface';
 import { GlobalConstants } from '../shared/global-constants';
 import { IMovie } from '../shared/movie.interface';
 import { Iuser } from '../user/user.Interface';
+import { MovieplayerComponent } from './movieplayer.component';
 import { MoviepostcommentsComponent } from './moviepostcomments.component';
 
 @Component({
@@ -299,4 +301,24 @@ export class MovieDetailsComponent implements OnInit {
   rateBtn() {
     this.rateShown = !this.rateShown;
   }
+
+  @ViewChild('videoPlayer', { static: true }) videoPlayer: any;
+
+  playVideo() {
+    this.movieService.getMovieById(this.movieId).subscribe(res=>{
+      
+      this.matDialog.open(MovieplayerComponent, {
+        width: '600px',
+        maxWidth: '800px',
+        height: 'auto',
+        hasBackdrop: true,
+        maxHeight: '700px',
+        data: {
+           videourl: res.data.videourl,
+        },
+      })
+    })
+       
+      
+      }
 }

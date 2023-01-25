@@ -85,12 +85,16 @@
 
       <!-- player -->
       <div class="col-12 col-xl-6" style="height: fit-content"> -->
-        <video width="100%" controls>
+        <!-- <video width="100%" controls>
        
           <source
             src="https://flixgo.herokuapp.com/public/movies/{{movieDetails.videourl}}" type="video/mp4"
           />
-        </video>
+        </video> -->
+   
+       
+        
+       <div (click)="playVideo()"><img src="assets/img/player.png"/></div>
        
         <ul class="details__share-list">
           <li class="facebook btn">

@@ -25,10 +25,10 @@ import { Subscription } from 'rxjs';
 export class LoginComponent implements OnInit, OnDestroy {
   form = inject(FormBuilder).nonNullable.group({
     email: [
-      'papybp@gmail.com',
+      '',
       [Validators.required, Validators.pattern(GlobalConstants.emailRegix)],
     ],
-    password: ['Ab123', Validators.required],
+    password: ['', Validators.required],
   });
   isloged!: Ilogin;
   user!: IUserLogedin;
