@@ -36,6 +36,7 @@ export class AddepisodeComponent implements OnInit {
     const tvShowId = this.globalState.tvShow.value._id;
     const formData = this.episodeform.value;
     const data = { ...formData, tvshow_Id: tvShowId };
+    
     this.episodeService.addEpisode(data as Iepisode).subscribe({
       next: (res) => {
         if (res.error == true) {

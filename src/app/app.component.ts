@@ -43,15 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private userService: UserService,
     private movieService: MoviesService
   ) {
-    this.islogedSub = globalstate.issignedin.subscribe((state) => {
-      this.isloged = state;
-    });
-    this.isAdminSub = globalstate.isAdmin.subscribe((state) => {
-      this.isadmin = state;
-    });
-    globalstate.userId.subscribe((res) => {
-      this.userId = res;
-    });
+
     if (localStorage.getItem('@user')) {
       const token = JSON.parse(localStorage.getItem('@user') as string).token;
 
@@ -72,6 +64,16 @@ export class AppComponent implements OnInit, OnDestroy {
         islogedin: false,
       });
     }
+    this.islogedSub = globalstate.issignedin.subscribe((state) => {
+      this.isloged = state;
+    });
+    this.isAdminSub = globalstate.isAdmin.subscribe((state) => {
+      this.isadmin = state;
+    });
+    globalstate.userId.subscribe((res) => {
+      this.userId = res;
+    });
+ 
   }
 
   ngOnInit(): void {

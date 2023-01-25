@@ -145,6 +145,7 @@ export class ViewtvshowComponent implements OnInit, OnDestroy {
     const file = <File>e.target?.files[0];
     const filename = Date.now() + file.name;
     data.append('episode', file, filename);
+    console.log(file);
     this.episodeService.updateVideoById(episId, data).subscribe({
       next: (res) => {
         if (res.error == true) {
