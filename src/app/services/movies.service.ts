@@ -29,7 +29,7 @@ export class MoviesService {
       error: boolean;
       message: string;
       data: any;
-    }>(environment.apiURL + `movie/${movieId}`);
+    }>(environment.apiURL + `movies/${movieId}`);
   };
   userGetMovieById(movieId: string) {
     return this.httpclient.get<{
