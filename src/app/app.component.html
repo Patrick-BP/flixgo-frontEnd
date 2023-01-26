@@ -133,10 +133,15 @@
             />
           </div>
           <div class="dropdownSearch" *ngIf="isSearchbtn">
+           
             <ul *ngFor="let movie of moviesList | search : searchInput">
+              
               <li>
                 <div>
-                  <mat-icon>local_movies</mat-icon>
+                  <!-- <mat-icon>local_movies</mat-icon> -->
+                  <img width="40px" src="https://flixgo.herokuapp.com/public/posters/{{
+                    movie.thumbnail || 'poster.png'
+                  }}"/>
                 </div>
                 <span
                   ><a

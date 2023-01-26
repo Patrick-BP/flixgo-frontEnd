@@ -16,6 +16,7 @@ import { Iepisode, ITvshows } from 'src/app/shared/movie.interface';
   styleUrls: ['./viewtvshow.component.css'],
 })
 export class ViewtvshowComponent implements OnInit, OnDestroy {
+  
   tvshowDetails!: ITvshows;
   episodes!: any;
   dialogServiceSub!: Subscription;
@@ -103,6 +104,7 @@ export class ViewtvshowComponent implements OnInit, OnDestroy {
   }
 
   uploadImg(e: any, tvId: string) {
+    if(e.target.files){
     this.ngxloader.start();
     const data = new FormData();
     const file = <File>e.target?.files[0];
@@ -138,8 +140,10 @@ export class ViewtvshowComponent implements OnInit, OnDestroy {
       },
     });
   }
+  }
 
   uploadVideo(e: any, episId: string) {
+    if(e.target.files){
     this.ngxloader.start();
     const data = new FormData();
     const file = <File>e.target?.files[0];
@@ -174,6 +178,7 @@ export class ViewtvshowComponent implements OnInit, OnDestroy {
         this.ngxloader.stop();
       },
     });
+  }
   }
 
   indexTracker() {}

@@ -16,7 +16,7 @@ export class CatalogtvshowsComponent {
     language: [''],
     year: [''],
     country: [''],
-    rating: [''],
+    
   });
 
   constructor(private tvshowService: TvshowslistService) {

@@ -33,6 +33,7 @@ export class ViewmovieComponent implements OnInit {
     this.movieDetails = globalstate.movie.value;
   }
   uploadImg(e: any) {
+    if(e.target.files){
     this.ngxloader.start();
     const data = new FormData();
     const file = <File>e.target?.files[0];
@@ -72,9 +73,12 @@ export class ViewmovieComponent implements OnInit {
           this.ngxloader.stop();
         },
       });
+
+    }
   }
 
   uploadVideo(e: any) {
+    if(e.target.files){
     this.ngxloader.start();
     const data = new FormData();
     const file = <File>e.target?.files[0];
@@ -113,6 +117,7 @@ export class ViewmovieComponent implements OnInit {
           this.ngxloader.stop();
         },
       });
+    }
   }
 
   refreshMovie() {

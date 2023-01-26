@@ -206,7 +206,7 @@
           <!-- card -->
           <div
             class="col-6 col-sm-4 col-lg-3 col-xl-2"
-            *ngFor="let movie of moviesList"
+            *ngFor="let movie of moviesList.slice(0, currentPageM)"
           >
             <div class="card">
               <div class="card__cover">
@@ -242,6 +242,15 @@
               </div>
             </div>
           </div>
+          <div class="loadMoreDiv">
+            <button
+              class="loadMore"
+              (click)="loadMoreM()"
+              [disabled]="currentPageM >= moviesList.length"
+            >
+              Load More
+            </button>
+          </div>
           <!-- end card -->
         </div>
       </div>
@@ -256,7 +265,7 @@
           <!-- card -->
           <div
             class="col-6 col-sm-4 col-lg-3 col-xl-2"
-            *ngFor="let tvshow of tvshowsList"
+            *ngFor="let tvshow of tvshowsList.slice(0, currentPageT)"
           >
             <div class="card">
               <div class="card__cover">
@@ -290,6 +299,15 @@
                 >
               </div>
             </div>
+          </div>
+          <div class="loadMoreDiv">
+            <button
+              class="loadMore"
+              (click)="loadMoreT()"
+              [disabled]="currentPageT >= tvshowsList.length"
+            >
+              Load More
+            </button>
           </div>
           <!-- end card -->
         </div>

@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiURL: "https://flixgo.herokuapp.com/",
+  apiURL: "http://localhost:8000/",
+  // apiURL: "https://flixgo.herokuapp.com/",
 };

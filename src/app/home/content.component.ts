@@ -10,6 +10,8 @@ import { GlobalstateService } from '../services/globalstate.service';
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
+  currentPageT: any = 12;
+  currentPageM: any = 12;
   env: any = environment;
   moviesList!: IMovie[];
   tvshowsList!: ITvshows[];
@@ -26,6 +28,11 @@ export class ContentComponent implements OnInit {
       this.tvshowsList = res.data;
     });
   }
-
+  loadMoreT() {
+    this.currentPageT += 12;
+  }
+  loadMoreM() {
+    this.currentPageM += 12;
+  }
   ngOnInit(): void {}
 }
