@@ -19,9 +19,7 @@
             <div class="card__cover">
               <form>
                 <img
-                  src="https://flixgo.herokuapp.com/public/posters/{{
-                    movieDetails.thumbnail || 'poster.png'
-                  }}"
+                  src="{{movieDetails.thumbnail || 'assets/img/poster.png'}}"
                   alt=""
                 />
                 <label for="file-upload" class="custom-file-upload">
@@ -84,7 +82,7 @@
       <video width="100%" controls>
        
         <source
-          src="https://flixgo.herokuapp.com/public/movies/{{ movieDetails.videourl }}"
+          src="{{ movieDetails.videourl }}"
           type="video/mp4"
         />
       </video>

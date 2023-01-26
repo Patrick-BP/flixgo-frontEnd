@@ -45,9 +45,9 @@ userServiceSub!:Subscription
       this.form.patchValue(state);
       this.userInfo = state;
 if(this.userInfo.imgUrl){
-  this.profilepic = environment.apiURL+'public/profile/'+this.userInfo.imgUrl
+  this.profilepic = this.userInfo.imgUrl
 }else{
-  this.profilepic = environment.apiURL+'public/profile/profilepic.png'
+  this.profilepic = 'assets/img/profilepic.png'
 }
        
     });

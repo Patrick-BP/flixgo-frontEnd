@@ -82,8 +82,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.profileInit =
           state?.firstname.charAt(0) + ' ' + state?.lastname.charAt(0);
       } else {
-        this.profilepic =
-          environment.apiURL + 'public/profile/' + state?.imgUrl;
+        this.profilepic = state?.imgUrl;
       }
     });
   }

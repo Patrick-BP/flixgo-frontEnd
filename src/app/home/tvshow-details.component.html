@@ -21,9 +21,7 @@
             <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
               <div class="card__cover">
                 <img
-                  src="https://flixgo.herokuapp.com/public/posters/{{
-                    tvshowDetails.thumbnail || 'poster.png'
-                  }}"
+                  src="{{tvshowDetails.thumbnail || '../assets/img/poster.png'}}"
                   alt=""
                 />
               </div>
@@ -283,9 +281,7 @@
                       <div class="comments__autor">
                         <img
                           class="comments__avatar"
-                          src="https://flixgo.herokuapp.com/public/profile/{{
-                            comment.userId.imgUrl || 'profilepic.png'
-                          }}"
+                          src="{{comment.userId.imgUrl || '../assets/img/profilepic.png'}}"
                           alt=""
                         />
                         <span class="comments__name"
@@ -341,9 +337,8 @@
                           <div class="comments__autor">
                             <img
                               class="comments__avatar"
-                              src="https://flixgo.herokuapp.com/public/profile/{{
-                                reply.userId.imgUrl || 'profilepic.png'
-                              }}"
+                              src="{{
+                                reply.userId.imgUrl || '../assets/img/profilepic.png'}}"
                               alt=""
                             />
                             <span class="comments__name">{{
@@ -415,9 +410,7 @@
             <div class="card">
               <div class="card__cover">
                 <img
-                  src="https://flixgo.herokuapp.com/public/posters/{{
-                    movie.thumbnail || 'poster.png'
-                  }}"
+                  src="{{movie.thumbnail || '../assets/img/poster.png'}}"
                   alt=""
                 />
                 <a
