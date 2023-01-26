@@ -13,8 +13,8 @@ export class ContentComponent implements OnInit {
   currentPageT: any = 12;
   currentPageM: any = 12;
   env: any = environment;
-  moviesList!: IMovie[];
-  tvshowsList!: ITvshows[];
+  moviesList: IMovie[] =[];
+  tvshowsList: ITvshows[] =[];
   constructor(
     private movieService: MoviesService,
     private tvshowService: TvshowslistService,
