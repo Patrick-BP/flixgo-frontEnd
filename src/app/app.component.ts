@@ -12,6 +12,7 @@ import jwt_decode from 'jwt-decode';
 import { MoviesService } from './services/movies.service';
 import { IMovie } from './shared/movie.interface';
 import { FormBuilder } from '@angular/forms';
+import { WelcomemessageComponent } from './welcomemessage.component';
 
 @Component({
   selector: 'app-root',
@@ -63,7 +64,14 @@ export class AppComponent implements OnInit, OnDestroy {
       this.globalstate.issignedin.next({
         islogedin: false,
       });
+
+     const dialogConfig = new MatDialogConfig();
+    this.dialog.open(WelcomemessageComponent, dialogConfig);
+  
+    
     }
+
+
     this.islogedSub = globalstate.issignedin.subscribe((state) => {
       this.isloged = state;
     });

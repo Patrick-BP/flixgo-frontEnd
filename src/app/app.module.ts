@@ -39,6 +39,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgPipesModule } from 'ngx-pipes';
 import { FilterPipe } from './shared/filter.pipe';
 import { SearchPipe } from './shared/search.pipe';
+import { WelcomemessageComponent } from './welcomemessage.component';
 
 
 const materialComponents = [
@@ -114,6 +115,7 @@ const MY_ROUTES: Routes = [
     ReversePipe,
     TruncatePipe,
     SearchPipe,
+    WelcomemessageComponent,
     
     
     
