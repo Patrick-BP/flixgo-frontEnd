@@ -58,6 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
       });
       movieService.getAllMovies().subscribe((res) => {
         this.moviesList = res.data;
+        
       });
       this.refreshuser();
     } else {
@@ -134,12 +135,15 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   search($event: any) {
-    this.movieService.getAllMovies().subscribe((res) => {
-      this.moviesList = res.data;
-    });
+    
+    
   }
 
   searchbtn() {
     this.isSearchbtn = !this.isSearchbtn;
+    this.movieService.getAllMovies().subscribe((res) => {
+      this.moviesList = res.data;
+      
+    });
   }
 }
