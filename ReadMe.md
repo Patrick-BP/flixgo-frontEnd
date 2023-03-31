@@ -1,5 +1,6 @@
 # Flixgo
 
+<img src="https://github.com/Patrick-BP/flixgo-frontEnd/blob/main/goflix.png" />
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Development server
